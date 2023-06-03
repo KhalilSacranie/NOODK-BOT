@@ -27,7 +27,7 @@ module.exports = {
 			const commandFiles = fs
 				.readdirSync(commandsPath)
 				.filter((file) => file.endsWith('.js'));
-			for (file of commandFiles) {
+			for (const file of commandFiles) {
 				const filePath = path.join(commandsPath, file);
 				const command = require(filePath);
 
@@ -62,7 +62,7 @@ module.exports = {
 
 		for (let i = 0; i < chunks.length; i++) {
 			const embed = new EmbedBuilder()
-				.setTitle(`NOODK BOT's Commands`)
+				.setTitle("NOODK BOT's Commands")
 				.setColor(await interaction.member.displayHexColor);
 
 			for (let c = 0; c < chunks[i].length; c++) {
@@ -73,6 +73,7 @@ module.exports = {
 						name += ` \`${chunks[i][c].options[o].name}\``;
 					}
 				}
+
 				embed.addFields({
 					name: name,
 					value: chunks[i][c].description,
