@@ -67,8 +67,7 @@ module.exports = {
 				new ButtonBuilder()
 					.setCustomId('back')
 					.setLabel('Back')
-					.setStyle(ButtonStyle.Secondary)
-					.setDisabled(page === 0),
+					.setStyle(ButtonStyle.Secondary),
 			)
 			.addComponents(
 				new ButtonBuilder()
